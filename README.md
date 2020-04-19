@@ -7,4 +7,4 @@ I don't know how to play it either ¯\_(ツ)_/¯
 (p.s. if you don't know how to play, just click "AI move" and AI will make a move for you)
 
 ### Example Gameplay
-![Gameplay](https://github.com/legedith/minesweper/mines.JPG "MINES")
+![Gameplay](https://github.com/legedith/minesweeper/mines.JPG "MINES")
