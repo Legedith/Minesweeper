@@ -6,4 +6,5 @@ I don't know how to play it either ¯\_(ツ)_/¯
 3. Enjoy!
 (p.s. if you don't know how to play, just click "AI move" and AI will make a move for you)
 
-### Example Gmeplay
+### Example Gameplay
+![Gameplay](https://github.com/legedith/minesweper/mines.png "MINES")
