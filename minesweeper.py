@@ -244,9 +244,9 @@ class MinesweeperAI():
                     break
        
         safe_adder()
-        print("after 1st check")
-        for i in self.knowledge:
-            print(i)
+        # print("after 1st check")
+        # for i in self.knowledge:
+        #     print(i)
         for i in copy.deepcopy(self.knowledge):
             # skip if empty
             if len(i.cells) == 0:
@@ -259,18 +259,31 @@ class MinesweeperAI():
                     self.knowledge.append(Sentence(i.cells.symmetric_difference(j.cells), abs(i.count-j.count)))
                     print("...", i, j, end=" ")
         
-        print("after deduction")
-        for i in self.knowledge:
-            print(i)
+        # print("after deduction")
+        # for i in self.knowledge:
+        #     print(i)
 
         safe_adder()
+        for i in copy.deepcopy(self.knowledge):
+            occ = len([1 for j in self.knowledge if j.cells==i.cells])-1  
+            while occ>1:
+                try:
+                    self.knowledge.remove(i)
+                    print("__________________________Removing ",i)
+                    occ-=1
+                except:
+                    print(i,"Lost ############################")
+                    occ = 0
+                    
+            
         print("at last")        
         for i in self.knowledge:
             print(i)
+            
         for i in copy.deepcopy(self.knowledge):
             if i.cells == set():
                 self.knowledge.remove(i)                
-
+        # Remove duplicates from knowledge
         # print("Mines:",self.mines)
         # print("Safes:",self.safes) 
         
